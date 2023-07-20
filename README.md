@@ -8,8 +8,8 @@ La base de datos es una de db4free.net, por lo que no se si seguira viva con el 
 
 para usar: 
 
-# git clone
-# npm install
-# node book-api.js
-# abrir desde la carpeta cliente el index.html.
+## git clone
+## npm install
+## node book-api.js
+## abrir desde la carpeta cliente el index.html.
 
