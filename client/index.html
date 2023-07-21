@@ -2,30 +2,20 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Book API Front-end</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-	<style>
-		body {
-			padding: 20px;
-		}
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
 
-		h1 {
-			margin-bottom: 20px;
-		}
-
-		.card {
-			margin-bottom: 20px;
-		}
-
-		#editForm input {
-			margin-bottom: 10px;
-		}
-	</style>
 </head>
 
 <body>
+	<div id="serverMessage" class="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true" onclick="hideServerMessage()">
+			&times;
+		</button>
+	</div>
 	<div class="container">
 		<h1>List of books</h1>
 		<div id="books"></div>
@@ -46,7 +36,7 @@
 				<label for="title">Title</label>
 				<input class="form-control" name="title" id="title" required />
 			</div>
-
+			<br>
 			<!--Other fields-->
 			<button type="submit" class="btn btn-primary">
 				Submit
@@ -59,9 +49,6 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title">Edit Book</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
 				</div>
 				<div class="modal-body">
 					<form id="editForm">
@@ -84,8 +71,12 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<script src="server-messages.js"></script>
 	<script src="book-list.js"></script>
+	<script src="book-add.js"></script>
+	<script src="book-edit.js"></script>
+	<script src="book-delete.js"></script>
 </body>
 
 </html>
